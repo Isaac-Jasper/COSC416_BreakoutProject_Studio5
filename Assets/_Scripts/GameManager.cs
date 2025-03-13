@@ -5,6 +5,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private int maxLives = 3;
     [SerializeField] private Ball ball;
     [SerializeField] private Transform bricksContainer;
+    [SerializeField] private GameObject[] brickShatter;
 
     private int currentBrickCount;
     private int totalBrickCount;
@@ -27,8 +28,12 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         ball.FireBall();
     }
 
+    public void PlayBrickShatter(Vector3 position) {
+        int rand = Random.Range(0,brickShatter.Length);
+        Instantiate(brickShatter[rand], position, brickShatter[rand].transform.rotation);
+    }
     public void OnBrickDestroyed(Vector3 position)
-    {
+    {   
         // fire audio here
         // implement particle effect here
         // add camera shake here
