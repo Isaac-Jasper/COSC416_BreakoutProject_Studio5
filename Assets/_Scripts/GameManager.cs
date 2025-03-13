@@ -6,6 +6,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private Ball ball;
     [SerializeField] private Transform bricksContainer;
     [SerializeField] private GameObject[] brickShatter;
+    [SerializeField] private float blockDestroyShakeDuration, blockDestroyShakeStrength;
 
     private int currentBrickCount;
     private int totalBrickCount;
@@ -29,6 +30,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     }
 
     public void PlayBrickShatter(Vector3 position) {
+        CameraShake.Instance.Shake(blockDestroyShakeDuration, blockDestroyShakeStrength);
         int rand = Random.Range(0,brickShatter.Length);
         Instantiate(brickShatter[rand], position, brickShatter[rand].transform.rotation);
     }
