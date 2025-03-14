@@ -11,6 +11,7 @@ namespace _Scripts.Utils
         private static readonly int ShaderProp = Shader.PropertyToID("_BaseColor");
 
         private MaterialPropertyBlock Mpb => mpb ??= new MaterialPropertyBlock();
+        public Color Color => color;
 
         private void OnEnable()
         {

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using _Scripts.Utils;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
 {
@@ -29,11 +30,22 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         ball.FireBall();
     }
 
-    public void PlayBrickShatter(Vector3 position) {
-        CameraShake.Instance.Shake(blockDestroyShakeDuration, blockDestroyShakeStrength);
-        int rand = Random.Range(0,brickShatter.Length);
-        Instantiate(brickShatter[rand], position, brickShatter[rand].transform.rotation);
+    public void PlayBrickShatter(Vector3 position, Color brickColor)
+{
+    CameraShake.Instance.Shake(blockDestroyShakeDuration, blockDestroyShakeStrength);
+    int rand = Random.Range(0, brickShatter.Length);
+    GameObject shatterInstance = Instantiate(brickShatter[rand], position, brickShatter[rand].transform.rotation);
+    
+    // Apply the brick color to all shatter pieces
+    foreach (Transform piece in shatterInstance.transform)
+    {
+        HotSwapColor colorComponent = piece.GetComponent<HotSwapColor>();
+        if (colorComponent != null)
+        {
+            colorComponent.SetColor(brickColor);
+        }
     }
+}
     public void OnBrickDestroyed(Vector3 position)
     {   
         // fire audio here
