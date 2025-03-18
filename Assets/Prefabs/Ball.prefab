@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 882357203279478688}
   - component: {fileID: 8959031048966596842}
   - component: {fileID: 6846597512200348566}
+  - component: {fileID: 5506132954517044801}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -100,6 +101,19 @@ MonoBehaviour:
   maxBallBounceBackSpeed: 10
   ballAnchor: {fileID: 0}
   rb: {fileID: 8959031048966596842}
+--- !u!114 &5506132954517044801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539175397210287971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd1c4a6ef626404983db8659a7e36aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkParticle: {fileID: 3873547578890115431, guid: d44e9cd4eae5ca34db1a71475394cf57, type: 3}
 --- !u!1 &4625805382739171240
 GameObject:
   m_ObjectHideFlags: 0
