@@ -9,7 +9,10 @@ https://kerchoo42.itch.io/breakout-project
 
 # Implemented Features
 
-Bricks shatter on impact and create a camera shake (Isaac)
-Bricks are random colours (Zacki)
-Music and SFX (Owen)
-Wall bounce and paddle bounce particle effects (Cooper)
+- Bricks shatter on impact and create a camera shake (Isaac)
+
+- Bricks are random colours (Zacki)
+
+- Music and SFX (Owen)
+
+- Wall bounce and paddle bounce particle effects (Cooper)
