@@ -2229,11 +2229,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 1438779903}
   musicSource: {fileID: 1438779902}
-  breakClip: {fileID: 8300000, guid: 3bffdb544b09f9945989e9e7bff1fe4a, type: 3}
+  breakClip: {fileID: 8300000, guid: 39f903709c95e5644af1195f89335d81, type: 3}
   bounceClip: {fileID: 8300000, guid: 42a5d694802409e44b4b3b397accaeb3, type: 3}
   wallBounceClip: {fileID: 8300000, guid: e053cba0677f0464f92b4246e83799a9, type: 3}
   deathClip: {fileID: 8300000, guid: 400259821414edc4db95e475d1998c42, type: 3}
-  musicClip: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: 0982b7d03fb3abe4facf7c5e0a9ddd5b, type: 3}
 --- !u!4 &1438779905
 Transform:
   m_ObjectHideFlags: 0
