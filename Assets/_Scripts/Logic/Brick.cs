@@ -32,6 +32,8 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (AudioManager.instance != null) { AudioManager.instance.PlaySound(AudioManager.instance.breakClip); }
+
         if (destroyRoutine != null) return;
         if (!other.gameObject.CompareTag("Ball")) return;
         destroyRoutine = StartCoroutine(DestroyWithDelay());

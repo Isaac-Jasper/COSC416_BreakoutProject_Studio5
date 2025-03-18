@@ -22,6 +22,19 @@ public class Ball : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
+
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySound(AudioManager.instance.bounceClip);
+            }
+        }
+
+        if(other.gameObject.CompareTag("Environment"))
+        {
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySound(AudioManager.instance.wallBounceClip);
+            }
         }
     }
 
